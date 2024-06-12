@@ -1,0 +1,37 @@
+<div class="flex flex-col gap-7 p-7 rounded-lg bg-[#EDF2F6] w-full">
+  <h1 class="text-lg font-medium">Tổng quan</h1>
+  <div class="flex flex-wrap justify-between gap-4">
+    <div class="flex flex-col gap-1 min-w-[10rem] max-w-[22rem]">
+      <span class="text-base">Họ và Tên:</span>
+      <span class="text-base font-medium">{{ currentUser.username }}</span>
+    </div>
+    <div class="flex flex-col gap-1 min-w-[10rem] max-w-[22rem]">
+      <span class="text-base">Email:</span>
+      <span class="text-base font-medium">{{ currentUser.email }}</span>
+    </div>
+    <div class="flex flex-col gap-1 min-w-[10rem] max-w-[22rem]">
+      <span class="text-base">Số điện thoại:</span>
+      <span class="text-base font-medium">{{ currentUser.phone }}</span>
+    </div>
+    <div class="flex flex-col gap-1 min-w-[10rem] max-w-[22rem]">
+      <span class="text-base">Nhóm khách hàng:</span>
+      <span class="text-base font-medium">{{ currentUser.role == 1 ? "Member" : "Admin" }}</span>
+    </div>
+  </div>
+  <div class="w-full h-[2px] bg-[#2293FA] rounded-xl"></div>
+  <div class="flex gap-5">
+    <div class="w-[140px] h-[140px] rounded-full">
+      <img [src]="imageUrl" class="w-full h-full object-cover rounded-full object-center" alt="">
+    </div>
+    <div class="flex items-center">
+      <button (click)="fileInput.click()" class="py-2 px-4 border-2 border-[#2293FA] font-medium text-[#2293FA] text-base rounded-lg">Cập nhật hình ảnh</button>
+      <input #fileInput type="file" name="picture" accept="image/*" (change)="onFileSelected($event)" required hidden>
+    </div>
+    <div class="w-[2px] h-full bg-[#2293FA] rounded-xl"></div>
+    <div class="flex flex-col gap-2 h-full justify-center">
+      <span class="text-base">Vui lòng chọn ảnh nhỏ hơn 5MB</span>
+      <span class="text-base">Chọn hình ảnh phù hợp, không phản cảm</span>
+    </div>
+  </div>
+  <button (click)="onUpload()" class="mt-4 py-2 px-4 bg-[#2293FA] text-white font-medium text-base rounded-lg">Tải lên</button>
+</div>

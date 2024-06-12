@@ -1,0 +1,547 @@
+{
+  "categories": [
+    {
+      "id": "1",
+      "name": "Kinh dị"
+    },
+    {
+      "id": "2",
+      "name": "Hành động"
+    },
+    {
+      "id": "3",
+      "name": "Chiến thuật"
+    },
+    {
+      "id": "4",
+      "name": "Giải mã"
+    },
+    {
+      "id": "5",
+      "name": "Sinh tồn"
+    },
+    {
+      "id": "6",
+      "name": "Phiêu lưu"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "categoryId": [
+        5
+      ],
+      "name": "Minecraft",
+      "description": "Minecraft nổi bật với đồ họa dạng khối lập phương, nơi mà thế giới game được xây dựng từ những khối vuông 3D. Người chơi có thể tương tác với thế giới theo nhiều cách khác nhau, từ việc khai thác tài nguyên, xây dựng công trình, chế tạo vật phẩm, cho đến khám phá các hang động, chiến đấu với quái vật và sinh tồn trong các môi trường khác nhau.",
+      "img": "1.jpg",
+      "imgDescription": [
+        "2.jpg",
+        "3.jpg",
+        "4.jpg",
+        "5.jpg"
+      ],
+      "promotionalPrice": 299000,
+      "cornerPrice": 350000,
+      "developer": "Mojang Studios,Double Eleven",
+      "video": "https://cdn.akamai.steamstatic.com/steam/apps/256845674/movie480_vp9.webm?t=1629987221",
+      "views": 1,
+      "trend": 1,
+      "rate": 4.5
+    },
+    {
+      "id": "2",
+      "categoryId": [
+        2
+      ],
+      "name": "Grand Theft Auto V - GTA V",
+      "description": "Grand Theft Auto V (còn được gọi là Grand Theft Auto 5, GTA 5  hoặc GTA V) là trò chơi video được phát triển bởi Rockstar North thuộc hãng Rockstar Games. Là phiên bản thứ năm trong Dòng trò chơi Grand Theft Auto  và là phần kế tiếp của Grand Theft Auto IV . Bản gốc của trò chơi chính thức được phát hành vào ngày 17 Tháng 9 năm 2013 cho phiên bản Xbox 360 và PlayStation 3. Trò chơi cũng đã được phát hành cho phiên bản Xbox One và PlayStation 4  vào ngày 18 tháng 11 năm 2014, sau đó phát hành cho PC vào ngày 14 tháng 4 năm 2015.",
+      "img": "1.jpg",
+      "imgDescription": [
+        "2.jpg",
+        "3.jpg",
+        "4.jpg",
+        "5.jpg"
+      ],
+      "promotionalPrice": 277000,
+      "cornerPrice": 450000,
+      "developer": "Rockstar North",
+      "video": "https://cdn.cloudflare.steamstatic.com/steam/apps/257010267/movie480_vp9.webm?t=1711059406",
+      "views": 1,
+      "trend": 1,
+      "rate": 4.5
+    },
+    {
+      "id": "3",
+      "categoryId": [
+        1
+      ],
+      "name": "Pacify",
+      "description": "Bạn vừa gia nhập PAH Inc. - tên viết tắt của Paranatural Activity Helpers Incorporated với mức lương hậu hĩnh. Họ nói đây là công việc an toàn, bạn sẽ không gặp nguy hiểm và luôn bận rộn với các hoạt động tích cực. Và công việc đầu tiên của bạn là ở… ngôi nhà ma ám cũ kỹ. Có 1 “cò” đất muốn rao bán ngôi nhà, nhưng vì cả thị trấn lan truyền tin đồn về ngôi nhà ma này nên anh ta chưa thể bán được. Anh ta cần bạn đến kiểm tra và xác nhận ngôi nhà an toàn. Game thủ có thể tham gia nhiệm vụ 1 mình hoặc cùng 3 người nữa. Kiểm tra địa điểm và nếu có bất cứ điều gì bất thường xảy ra, hãy ghi lại bằng chứng cho PAH Inc.",
+      "img": "1.jpg",
+      "imgDescription": [
+        "2.jpg",
+        "3.jpg",
+        "4.jpg",
+        "5.jpg"
+      ],
+      "promotionalPrice": 51000,
+      "cornerPrice": 73000,
+      "developer": "Shawn Hitchcock",
+      "video": "https://cdn.cloudflare.steamstatic.com/steam/apps/256740850/movie480.webm?t=1708618684",
+      "views": 1,
+      "trend": 1,
+      "rate": 4.5
+    },
+    {
+      "id": "4",
+      "categoryId": [
+        1
+      ],
+      "name": "Left 4 Dead 2",
+      "description": "Left 4 Dead 2 diễn ra trong một thế giới bị nhiễm bệnh dịch zombie, nơi một loại virus đã biến đổi phần lớn dân số thành những sinh vật điên cuồng và khát máu. Người chơi sẽ vào vai một trong bốn người sống sót với tên gọi Ellis, Coach, Nick, và Rochelle. Nhiệm vụ của họ là hợp tác để vượt qua những địa điểm khác nhau từ miền Nam nước Mỹ, từ Savannah, Georgia, đến New Orleans, Louisiana, với hy vọng tìm thấy nơi trú ẩn an toàn và sự cứu trợ.",
+      "img": "1.jpg",
+      "imgDescription": [
+        "2.jpg",
+        "3.jpg",
+        "4.jpg",
+        "5.jpg"
+      ],
+      "promotionalPrice": 0,
+      "cornerPrice": 142000,
+      "developer": "Valve",
+      "video": "https://cdn.cloudflare.steamstatic.com/steam/apps/5952/movie480.webm?t=1682697457",
+      "views": 1,
+      "trend": 0,
+      "rate": 4.5
+    },
+    {
+      "id": "5",
+      "categoryId": [
+        5,
+        6
+      ],
+      "name": "Don't Starve Together",
+      "description": "Don't Starve Together thách thức người chơi sống sót trong một vùng đất hoang vu càng lâu càng tốt. Trong Chế độ Trải Nghiệm, cách duy nhất để kết thúc game là khi người chơi chết hoặc bằng cách bắt đầu lại game trong một thế giới ngẫu nhiên mới thông qua việc sử dụng Đồ Gỗ. Khi người chơi chết họ nhận được Kinh Nghiệm cho số ngày mà họ sống sót được. Mỗi lần chết số kinh nghiệm đó sẽ được thêm vào tổng số điểm tích lũy và dùng để mở khóa các nhân vật chơi được. Mặc khác chết là vĩnh viễn và thế giới của người chơi sẽ bị mất khi game kết thúc, các cách khác nhau để hồi sinh có thể tìm thấy để ngăn chặn xu thế tất yếu này.",
+      "img": "1.jpg",
+      "imgDescription": [
+        "2.jpg",
+        "3.jpg",
+        "4.jpg",
+        "5.jpg"
+      ],
+      "promotionalPrice": 0,
+      "cornerPrice": 165000,
+      "developer": "Klei Entertainment",
+      "video": "https://cdn.cloudflare.steamstatic.com/steam/apps/256989801/movie480_vp9.webm?t=1703009085",
+      "views": 1,
+      "trend": 0,
+      "rate": 4.5
+    },
+    {
+      "id": "6",
+      "categoryId": [
+        2
+      ],
+      "name": "DRAGON BALL FIGHTERZ - Cooler",
+      "description": "Dragon Ball FighterZ đã nhận được nhiều đánh giá tích cực từ giới phê bình và người chơi, nhờ vào đồ họa ấn tượng, lối chơi mượt mà và hệ thống chiến đấu sâu sắc. Trò chơi cũng đã đạt được thành công thương mại, trở thành một trong những tựa game đối kháng bán chạy nhất trong thời gian ngắn.",
+      "img": "1.jpg",
+      "imgDescription": [
+        "2.jpg",
+        "3.jpg",
+        "4.jpg",
+        "5.jpg"
+      ],
+      "promotionalPrice": 0,
+      "cornerPrice": 110000,
+      "developer": "Arc System Works",
+      "video": "https://cdn.cloudflare.steamstatic.com/steam/apps/256706799/movie480.webm?t=1519762912",
+      "views": 1,
+      "trend": 0,
+      "rate": 4.5
+    },
+    {
+      "id": "7",
+      "categoryId": [
+        2
+      ],
+      "name": "DRAGON BALL FighterZ - Ultimate Edition",
+      "description": "DRAGON BALL FighterZ - Ultimate Edition đã nhận được nhiều đánh giá tích cực từ giới phê bình và người chơi, nhờ vào đồ họa ấn tượng, lối chơi mượt mà và hệ thống chiến đấu sâu sắc. Trò chơi cũng đã đạt được thành công thương mại, trở thành một trong những tựa game đối kháng bán chạy nhất trong thời gian ngắn.",
+      "img": "1.jpg",
+      "imgDescription": [
+        "2.jpg",
+        "3.jpg",
+        "4.jpg",
+        "5.jpg"
+      ],
+      "promotionalPrice": 0,
+      "cornerPrice": 790000,
+      "developer": "Arc System Works",
+      "video": "https://cdn.cloudflare.steamstatic.com/steam/apps/256706799/movie480.webm?t=1519762912",
+      "views": 1,
+      "trend": 0,
+      "rate": 4.5
+    },
+    {
+      "id": "9",
+      "categoryId": [
+        3,
+        4,
+        6
+      ],
+      "name": "Hogwarts Legacy",
+      "description": "Hogwarts Legacy là một game nhập vai hành động thế giới mở hấp dẫn. Bây giờ bạn có thể kiểm soát hành động và trở thành trung tâm của cuộc phiêu lưu của riêng bạn trong thế giới phù thủy.",
+      "img": "1.jpg",
+      "imgDescription": [
+        "2.jpg",
+        "3.jpg",
+        "4.jpg",
+        "5.jpg"
+      ],
+      "promotionalPrice": 0,
+      "cornerPrice": 1290000,
+      "developer": "Avalanche Software",
+      "video": "https://cdn.cloudflare.steamstatic.com/steam/apps/256930504/movie480_vp9.webm?t=1676412591",
+      "views": 1,
+      "trend": 1,
+      "rate": 4.5
+    },
+    {
+      "id": "8",
+      "categoryId": [
+        2,
+        6
+      ],
+      "name": "Cyberpunk 2077",
+      "description": "Dragon Ball FighterZ đã nhận được nhiều đánh giá tích cực từ giới phê bình và người chơi, nhờ vào đồ họa ấn tượng, lối chơi mượt mà và hệ thống chiến đấu sâu sắc. Trò chơi cũng đã đạt được thành công thương mại, trở thành một trong những tựa game đối kháng bán chạy nhất trong thời gian ngắn.",
+      "img": "1.jpg",
+      "imgDescription": [
+        "2.jpg",
+        "3.jpg",
+        "4.jpg",
+        "5.jpg"
+      ],
+      "promotionalPrice": 495000,
+      "cornerPrice": 990000,
+      "developer": "CD PROJEKT RED",
+      "video": "https://cdn.cloudflare.steamstatic.com/steam/apps/256987121/movie480_vp9.webm?t=1701872779",
+      "views": 1,
+      "trend": 1,
+      "rate": 4.5
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "Cao Hoàng Thành",
+      "email": "caohoangthanh2003@gmail.com",
+      "veryEmail": "caohoangthanh2003@gmail.com",
+      "phone": "0337678852",
+      "password": "123456798",
+      "img": "default.jpg",
+      "role": 1
+    },
+    {
+      "id": "2ed2",
+      "username": "thanhlagi",
+      "email": "thanhchps29136@fpt.edu.vn",
+      "password": "123456",
+      "phone": "0337678852",
+      "veryEmail": "thanhchps29136@fpt.edu.vn",
+      "role": 1,
+      "img": "default.jpg"
+    },
+    {
+      "id": "3ddd",
+      "username": "asda",
+      "email": "asdas@gmail.com",
+      "password": "123456",
+      "phone": "0337678852",
+      "veryEmail": "asdas@gmail.com",
+      "role": 1,
+      "img": "default.jpg"
+    },
+    {
+      "id": "bd0b",
+      "username": "thanhlagidev",
+      "email": "thanhdev@gmail.com",
+      "password": "123456",
+      "phone": "0337678852",
+      "veryEmail": "thanhdev@gmail.com",
+      "role": 1,
+      "img": "default.jpg"
+    },
+    {
+      "id": "c294",
+      "username": "vohongson8520@gmail.com",
+      "email": "vohongson8520@gmail.com",
+      "password": "123456",
+      "phone": "0337678852",
+      "veryEmail": "vohongson8520@gmail.com",
+      "role": 1,
+      "img": "/uploads/1717426710789-wallpaperflare.com_wallpaper2.jpg"
+    },
+    {
+      "id": "8ca2",
+      "username": "khacduy@gmail.com",
+      "email": "khacduy@gmail.com",
+      "password": "123456",
+      "phone": "0337678852",
+      "veryEmail": "khacduy@gmail.com",
+      "role": 1,
+      "img": "default.jpg"
+    },
+    {
+      "id": "173b",
+      "username": "thaytho",
+      "email": "thaytho@gmail.com",
+      "password": "123456",
+      "phone": "0337678852",
+      "veryEmail": "thaytho@gmail.com",
+      "role": 1,
+      "img": "default.jpg"
+    }
+  ],
+  "comments": [],
+  "orders": [
+    {
+      "id": "44a5",
+      "user_id": "bd0b",
+      "total": 1432000,
+      "status": "waiting",
+      "products": [
+        {
+          "id": "9",
+          "name": "Hogwarts Legacy",
+          "img": "1.jpg",
+          "categoryId": [
+            3,
+            4,
+            6
+          ],
+          "price": 1290000,
+          "quantity": 1
+        },
+        {
+          "id": "4",
+          "name": "Left 4 Dead 2",
+          "img": "1.jpg",
+          "categoryId": [
+            1
+          ],
+          "price": 142000,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "6a32",
+      "user_id": "1",
+      "total": 142000,
+      "status": "pending",
+      "products": [
+        {
+          "id": "4",
+          "name": "Left 4 Dead 2",
+          "img": "1.jpg",
+          "categoryId": [
+            1
+          ],
+          "price": 142000,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "8574",
+      "user_id": "bd0b",
+      "total": 51000,
+      "status": "waiting",
+      "products": [
+        {
+          "id": "3",
+          "name": "Pacify",
+          "img": "1.jpg",
+          "categoryId": [
+            1
+          ],
+          "price": 51000,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "68b0",
+      "user_id": "c294",
+      "total": 193000,
+      "status": "pending",
+      "products": [
+        {
+          "id": "4",
+          "name": "Left 4 Dead 2",
+          "img": "1.jpg",
+          "categoryId": [
+            1
+          ],
+          "price": 142000,
+          "quantity": 1
+        },
+        {
+          "id": "3",
+          "name": "Pacify",
+          "img": "1.jpg",
+          "categoryId": [
+            1
+          ],
+          "price": 51000,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "c11a",
+      "user_id": "c294",
+      "total": 277000,
+      "status": "pending",
+      "products": [
+        {
+          "id": "2",
+          "name": "Grand Theft Auto V - GTA V",
+          "img": "1.jpg",
+          "categoryId": [
+            2
+          ],
+          "price": 277000,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "cc4b",
+      "user_id": "c294",
+      "total": 277000,
+      "status": "pending",
+      "products": [
+        {
+          "id": "2",
+          "name": "Grand Theft Auto V - GTA V",
+          "img": "1.jpg",
+          "categoryId": [
+            2
+          ],
+          "price": 277000,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "be0e",
+      "user_id": "c294",
+      "total": 277000,
+      "status": "pending",
+      "products": [
+        {
+          "id": "2",
+          "name": "Grand Theft Auto V - GTA V",
+          "img": "1.jpg",
+          "categoryId": [
+            2
+          ],
+          "price": 277000,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "c485",
+      "user_id": "8ca2",
+      "total": 452000,
+      "status": "waiting",
+      "products": [
+        {
+          "id": "3",
+          "name": "Pacify",
+          "img": "1.jpg",
+          "categoryId": [
+            1
+          ],
+          "price": 51000,
+          "quantity": 3
+        },
+        {
+          "id": "1",
+          "name": "Minecraft",
+          "img": "1.jpg",
+          "categoryId": [
+            5
+          ],
+          "price": 299000,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "2404",
+      "user_id": "bd0b",
+      "total": 0,
+      "status": "pending",
+      "products": []
+    },
+    {
+      "id": "17c7",
+      "user_id": "173b",
+      "total": 6490000,
+      "status": "waiting",
+      "products": [
+        {
+          "id": "1",
+          "name": "Minecraft",
+          "img": "1.jpg",
+          "categoryId": [
+            5
+          ],
+          "price": 299000,
+          "quantity": 20
+        },
+        {
+          "id": "3",
+          "name": "Pacify",
+          "img": "1.jpg",
+          "categoryId": [
+            1
+          ],
+          "price": 51000,
+          "quantity": 10
+        }
+      ]
+    },
+    {
+      "id": "34ca",
+      "user_id": "173b",
+      "total": 576000,
+      "status": "waiting",
+      "products": [
+        {
+          "id": "1",
+          "name": "Minecraft",
+          "img": "1.jpg",
+          "categoryId": [
+            5
+          ],
+          "price": 299000,
+          "quantity": 1
+        },
+        {
+          "id": "2",
+          "name": "Grand Theft Auto V - GTA V",
+          "img": "1.jpg",
+          "categoryId": [
+            2
+          ],
+          "price": 277000,
+          "quantity": 1
+        }
+      ]
+    }
+  ],
+  "favourite": []
+}

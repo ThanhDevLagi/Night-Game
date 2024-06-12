@@ -1,0 +1,105 @@
+<div class="">
+  <a routerLink="/product/{{item.id}}"  *ngFor="let item of productBanner" class="relative h-auto flex gap-x-8 mt-7">
+    <div class="w-3/4 h-[400px] max-w-full relative" id="carousel">
+      <img loading="lazy" src="./assets/images/GameImages/{{item.name}}/{{item.img}}" class="w-full h-full object-cover rounded-xl" alt="">
+      <div class="flex justify-between items-center absolute top-3 left-3 right-3">
+        <div class="flex gap-3 items-center">
+          <span *ngFor="let categoryId of item.categoryId" class="py-1 px-3 bg-gray-600 text-base text-white rounded-lg shadow-sm">{{getCategoryNameById(categoryId)}}</span>
+          <span class="py-1 px-3 bg-gray-600 text-base text-white rounded-lg shadow-sm text-center">+</span>
+        </div>
+        <button class="py-[12px] px-[16px] rounded-2xl bg-[#1C2C3B]">
+          <i class="fa-solid fa-heart text-xl text-red-600"></i>
+        </button>
+      </div>
+    </div>
+    <div class="w-1/4">
+      <div class="flex flex-col h-full gap-3">
+        <div class="flex flex-col gap-3 h-full p-5 rounded-lg bg-[#151F2B]">
+          <h1 class="text-lg font-medium text-white ">{{item.name}}</h1>
+          <p class="text-sm font-normal text-gray-400 textBreak leading-relaxed">{{item.description}}</p>
+          <div class="flex flex-col mt-auto justify-between gap-5">
+            <div class="flex gap-2">
+              <span [ngClass]="{'line-through text-gray-600': item.promotionalPrice !== 0, 'text-white text-lg': item.promotionalPrice === 0}">
+                {{item.cornerPrice.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}}
+              </span>
+              <span *ngIf="item.promotionalPrice !== 0" class="text-lg text-white">
+                {{item.promotionalPrice.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}}
+              </span>
+            </div>
+            <button class="py-[8px] px-[12px] bg-[#2293FA] rounded-xl text-white text-base font-medium">Mua Ngay</button>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 mt-auto gap-x-3">
+            <img loading="lazy" *ngFor="let imgbanner of item.imgDescription.slice(0,2)" src="./assets/images/GameImages/{{item.name}}/{{imgbanner}}" class="rounded object-cover">
+        </div>
+      </div>
+    </div>
+  </a>
+  <div class="flex flex-col gap-5 mt-8">
+    <div class="flex justify-between">
+      <h1 class="text-xl text-white font-medium">Game Kinh dị</h1>
+      <a routerLink="/shop" class="text-sm text-white font-medium p-2 rounded-xl bg-[#2993Fa]">Xem Thêm</a>
+    </div>
+    <div id='loading' *ngIf="setLoading" class='loading w-10 h-10 rounded-full border-blue-500 border-4 border-r-4 border-r-transparent animate-spin mx-auto my-10'></div>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 place-content-between">
+      <a routerLink="/product/{{item.id}}" *ngFor="let item of productsCategory1" class="flex flex-col gap-3 transform transition duration-300 hover:scale-110 cursor-pointer justify-between">
+        <div class="w-full h-[180px]">
+          <img loading="lazy" src="./assets/images/GameImages/{{item.name}}/{{item.img}}" class="w-full h-full object-cover rounded-lg" alt="">
+        </div>
+        <div class="inline-block py-1 px-2 rounded bg-[#1C2C3B]" style="width: fit-content;">
+          <span class="text-white text-sm">Basic Game</span>
+        </div>
+        <div class="flex flex-col gap-3">
+          <span class="text-base text-white font-medium">{{item.name}}</span>
+          <div class="flex items-center gap-3 mt-auto">
+            <div *ngIf="item.promotionalPrice !== 0" class="py-[2px] px-[8px] rounded-lg bg-[#2993Fa]">
+              <span class="text-white text-sm">-{{ getDiscountPercentage(item.promotionalPrice, item.cornerPrice) | number:'1.0-0' }}%</span>
+            </div>
+            <div class="flex gap-2 items-center mt-auto">
+              <span [ngClass]="{'line-through text-gray-600': item.promotionalPrice !== 0, 'text-white text-lg': item.promotionalPrice === 0}">
+                {{item.cornerPrice.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}}
+              </span>
+              <span *ngIf="item.promotionalPrice !== 0" class="text-lg text-white">
+                {{item.promotionalPrice.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}}
+              </span>
+
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="flex flex-col gap-5 mt-8">
+    <div class="flex justify-between">
+      <h1 class="text-xl text-white font-medium">Game Hành động</h1>
+      <a routerLink="/shop" class="text-sm text-white font-medium p-2 rounded-xl bg-[#2993Fa]">Xem Thêm</a>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 place-content-between">
+      <a routerLink="/product/{{item.id}}" *ngFor="let item of productsCategory2" class="flex flex-col gap-3 transform transition duration-300 hover:scale-110 cursor-pointer justify-between">
+        <div class="w-full h-[180px]">
+          <img loading="lazy" src="./assets/images/GameImages/{{item.name}}/{{item.img}}" class="w-full h-full object-cover rounded-lg" alt="">
+        </div>
+        <div class="inline-block py-1 px-2 rounded bg-[#1C2C3B]" style="width: fit-content;">
+          <span class="text-white text-sm">Basic Game</span>
+        </div>
+        <div class="flex flex-col gap-3">
+          <span class="text-base text-white font-medium">{{item.name}}</span>
+          <div class="flex items-center gap-3 mt-auto">
+            <div *ngIf="item.promotionalPrice !== 0" class="py-[2px] px-[8px] rounded-lg bg-[#2993Fa]">
+              <span class="text-white text-sm">-{{ getDiscountPercentage(item.promotionalPrice, item.cornerPrice) | number:'1.0-0' }}%</span>
+            </div>
+            <div class="flex gap-2 items-center mt-auto">
+              <span [ngClass]="{'line-through text-gray-600': item.promotionalPrice !== 0, 'text-white text-lg': item.promotionalPrice === 0}">
+                {{item.cornerPrice.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}}
+              </span>
+              <span *ngIf="item.promotionalPrice !== 0" class="text-lg text-white">
+                {{item.promotionalPrice.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}}
+              </span>
+
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

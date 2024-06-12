@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.textBreak{
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  text-decoration: none;
+}
+.active-link {
+  background-color: #2293FA;
+  color: #fff;
+}
+.active-link a {
+  color: #fff;
+}
+
+.blurblock::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Màu nền mờ đi */
+  pointer-events: none; /* Để không ảnh hưởng tới các phần tử bên dưới */
+  backdrop-filter: blur(0.2px); /* Hiệu ứng mờ */
+}
+.textBreak-4{
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  text-decoration: none;
+}

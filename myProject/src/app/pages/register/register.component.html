@@ -1,0 +1,71 @@
+<div class="flex items-center justify-center align-middle mt-12">
+  <div *ngIf="showSuccessPopup" >
+    <app-popupSuccess
+    [textSuccsessMessage]="textSuccsessMessage"
+    [successMessage]="successMessage"
+    [showPopup]="showSuccessPopup">
+    </app-popupSuccess>
+  </div>
+  <div *ngIf="showErrorPopup">
+    <app-popupError
+    [textMessage]="textMessage"
+    [errorMessage]="errorMessage"
+    [showPopup]="showErrorPopup"
+    >
+  </app-popupError>
+  </div>
+  <div class="flex bg-[#151F2B] rounded-lg">
+    <div class="w-[360px] h-auto max-w-full">
+      <img loading="lazy" src="./assets/images/bannerregister.png" class="w-full h-full object-cover object-center rounded-lg" alt="bannerregister">
+    </div>
+    <form [formGroup]="RegisterF" (submit)="onSubmit()">
+      <div class="flex flex-col py-4 px-8 w-[400px] gap-6">
+        <h1 class="text-white text-3xl font-medium text-center">Đăng ký</h1>
+        <div class="flex flex-col gap-2">
+          <label for="username" class="text-white text-base">Nhập họ và tên:</label>
+          <input id="username" type="text" formControlName="username" class="py-2 px-3 rounded outline-none bg-[#24394d] text-white" placeholder="Họ và tên" required>
+          <div *ngIf="RegisterF.controls['username'].dirty && RegisterF.controls['username'].errors" class="flex flex-col">
+            <p *ngIf="RegisterF.controls['username'].errors['required']" class="text-red-500 font-normal text-sm">Họ và tên không được để chống</p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-2">
+          <label for="email" class="text-white text-base">Nhập tài khoản / email:</label>
+          <input id="email" type="text" formControlName="email" class="py-2 px-3 rounded outline-none bg-[#24394d] text-white" placeholder="your-email@gmail.com" required>
+          <div *ngIf="RegisterF.controls['email'].dirty && RegisterF.controls['email'].errors" class="flex flex-col">
+            <p *ngIf="RegisterF.controls['email'].errors['required']" class="text-red-500 font-normal text-sm">Email không nên để chống</p>
+            <p *ngIf="RegisterF.controls['email'].errors['email']" class="text-red-500 font-normal text-sm">Email không đúng định dạng</p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-2">
+          <label for="password" class="text-white text-base">Nhập mật khẩu</label>
+          <input id="password" type="password" formControlName="password" class="py-2 px-3 rounded outline-none bg-[#24394d] text-white" placeholder="Mật khẩu" required>
+          <div *ngIf="RegisterF.controls['password'].dirty && RegisterF.controls['password'].errors" class="flex flex-col">
+            <p *ngIf="RegisterF.controls['password'].errors['required']" class="text-red-500 font-normal text-sm">Mật khẩu không nên để chống</p>
+            <p *ngIf="RegisterF.controls['password'].errors['minlength']" class="text-red-500 font-normal text-sm">Mật khẩu có ít nhất 6 kí tự</p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-2">
+          <label for="phone" class="text-white text-base">Nhập số điện thoại</label>
+          <input id="phone" type="text" formControlName="phone" class="py-2 px-3 rounded outline-none bg-[#24394d] text-white" placeholder="+03" required>
+          <div *ngIf="RegisterF.controls['phone'].dirty && RegisterF.controls['phone'].errors" class="flex flex-col">
+            <p *ngIf="RegisterF.controls['phone'].errors['required']" class="text-red-500 font-normal text-sm">Số điện thoại không được để chống</p>
+            <p *ngIf="RegisterF.controls['phone'].errors['minlength']" class="text-red-500 font-normal text-sm">Số điện thoại có tối thiểu 11 số</p>
+            <p *ngIf="RegisterF.controls['phone'].errors['nonNumeric']" class="text-red-500 font-normal text-sm">Số điện thoại không được chứa ký tự</p>
+          </div>
+        </div>
+        <button type="submit" [disabled]="RegisterF.invalid" class="py-2 px-3 rounded bg-blue-600 text-white">Đăng ký</button>
+        <span class="text-white text-center text-base">- hoặc -</span>
+        <div class="flex flex-col gap-4 items-center">
+          <div class="flex gap-3">
+            <div class="w-[40px] h-[40px] bg-white rounded-full flex items-center justify-center">
+              <i class="fa-brands fa-facebook text-3xl"></i>
+            </div>
+            <div class="w-[40px] h-[40px] bg-white rounded-full flex items-center justify-center">
+              <i class="fa-brands fa-google text-3xl"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

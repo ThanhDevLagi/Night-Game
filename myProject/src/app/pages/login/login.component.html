@@ -1,0 +1,66 @@
+  <div class="flex items-center justify-center align-middle mt-12">
+    <div *ngIf="showSuccessPopup" >
+      <app-popupSuccess
+      [textSuccsessMessage]="textSuccsessMessage"
+      [successMessage]="successMessage"
+      [showPopup]="showSuccessPopup">
+      </app-popupSuccess>
+    </div>
+    <div *ngIf="showErrorPopup">
+      <app-popupError
+      [textMessage]="textMessage"
+      [errorMessage]="errorMessage"
+      [showPopup]="showErrorPopup"
+      >
+    </app-popupError>
+    </div>
+    <div class="flex bg-[#151F2B] rounded-lg">
+      <form action="" method="post" [formGroup]="LoginF" (submit)="onSubmit()">
+        <div class="flex flex-col p-10 w-[400px] gap-6">
+          <h1 class="text-white text-3xl font-medium text-center">Đăng Nhập</h1>
+          <div class="flex flex-col gap-2">
+            <label for="" class="text-white text-base">Tên Đăng Nhập / Email:</label>
+            <input type="text" formControlName="email" class="py-2 px-3 rounded outline-none bg-[#24394d] text-white" placeholder="Nhập tài khoản" required>
+            <div *ngIf="LoginF.controls['email'].dirty && LoginF.controls['email'].errors" class="flex flex-col">
+              <p *ngIf="LoginF.controls['email'].errors['required']" class="text-red-500 font-normal text-sm">Tài khoản không được để trống</p>
+              <p *ngIf="LoginF.controls['email'].errors['email']" class="text-red-500 font-normal text-sm">Email không đúng định dạng</p>
+            </div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="password" class="text-white text-base">Mật Khẩu:</label>
+            <div class="relative">
+              <input type="password" formControlName="password" id="passwordInput" class="w-full py-2 px-3 rounded outline-none bg-[#24394d] text-white" placeholder="Nhập mật khẩu" required>
+              <button type="button" (click)="setActive()" class="absolute top-1 bottom-0 right-2 flex items-center justify-center w-8 h-8 rounded-full bg-[#24394d] hover:bg-[#1C2C3B]">
+                <i *ngIf="openEyes" id="toggleIcon" class="fa-regular fa-eye text-white"></i>
+                <i *ngIf="closeEyes" class="fa-solid fa-eye-slash text-white"></i>
+              </button>
+            </div>
+            <div *ngIf="LoginF.controls['password'].dirty && LoginF.controls['password'].errors" class="flex flex-col">
+              <p *ngIf="LoginF.controls['password'].errors['required']" class="text-red-500 font-normal text-sm">Mật khẩu không được để chống</p>
+            </div>
+          </div>
+          <div class="flex gap-2 items-center justify-between">
+            <div class="flex gap-2 items-center">
+              <input type="checkbox" class="w-[15px] h-[15px]">
+              <p class="text-white text-base">Ghi nhớ mật khẩu ?</p>
+            </div>
+            <a routerLink="/register" class="text-[#2993Fa] text-base font-medium">Tạo tài khoản ?</a>
+          </div>
+          <div class="flex flex-col gap-4 items-center">
+            <button type="submit" [disabled]="LoginF.invalid" class="text-white bg-[#2993Fa] p-2 rounded-lg w-full">Đăng nhập</button>
+            <div class="flex gap-3">
+              <div class="w-[40px] h-[40px] bg-white rounded-full flex items-center justify-center">
+                <i class="fa-brands fa-facebook text-3xl"></i>
+              </div>
+              <div class="w-[40px] h-[40px] bg-white rounded-full flex items-center justify-center">
+                <i class="fa-brands fa-google text-3xl"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="w-[320px] h-auto max-w-full">
+        <img loading="lazy" src="./assets/images/Kaisa_0.jpg" class="w-full h-full object-cover object-center rounded-lg" alt="bannerlogin">
+      </div>
+    </div>
+  </div>

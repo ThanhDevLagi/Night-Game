@@ -1,0 +1,114 @@
+<div id='loading' *ngIf="setLoading" class='loading w-10 h-10 rounded-full border-blue-500 border-4 border-r-4 border-r-transparent animate-spin mx-auto my-10'></div>
+<div *ngIf="productDetail" class="">
+  <div *ngIf="showSuccessPopup" >
+    <app-popupSuccess
+    [textSuccsessMessage]="textSuccsessMessage"
+    [successMessage]="successMessage"
+    [showPopup]="showSuccessPopup">
+    </app-popupSuccess>
+  </div>
+  <div *ngIf="showErrorPopup">
+    <app-popupError
+    [textMessage]="textMessage"
+    [errorMessage]="errorMessage"
+    [showPopup]="showErrorPopup"
+    >
+  </app-popupError>
+  </div>
+  <div class="mt-5 flex flex-col">
+    <div class="block relative">
+      <iframe class="rounded-xl w-full max-w-full h-[500px]" autoplay muted playsinline="true" allow="fullscreen" frameBorder="0" preload="none" loading="lazy"
+        [src]="trustUrl(productDetail.video)">
+      </iframe>
+      <div class="absolute top-0 p-4">
+        <a routerLink="/home" class="flex gap-3 text-lg text-white font-medium items-center p-2 bg-[#1C2C3B] rounded-xl"
+          style="width: fit-content;">
+          <i class="fa-solid fa-angle-left"></i>
+          Quay lại
+        </a>
+      </div>
+      <div class="absolute -bottom-3 w-full h-[70px] backdrop-blur-sm"></div>
+    </div>
+    <div class="flex relative -top-16">
+      <div class="flex items-center justify-between w-full">
+        <div class="flex gap-6">
+          <div class="w-[260px] max-w-full">
+            <img loading="lazy" src="./assets/images/GameImages/{{productDetail.name}}/{{productDetail.img}}"
+              class="w-full h-full object-cover rounded-xl object-center" alt="">
+          </div>
+          <div class="flex gap-8 flex-col align-middle">
+            <h1 class="text-2xl text-white font-medium">{{productDetail.name}}</h1>
+            <p class="max-w-[400px] textBreak-4 text-base text-gray-300">{{productDetail.description}}</p>
+            <div class="flex gap-4">
+              <div class="flex gap-2 items-center py-2 px-4 border rounded-lg cursor-pointer">
+                <i class="fa-brands fa-xbox text-lg text-white text-center"></i>
+                <span class="text-base text-white text-center">Series X|S</span>
+              </div>
+              <div class="flex gap-2 items-center py-2 px-4 border rounded-lg cursor-pointer">
+                <i class="fa-brands fa-windows text-lg text-white text-center"></i>
+                <span class="text-base text-white text-center">PC</span>
+              </div>
+              <div class="flex gap-2 items-center py-2 px-4 border rounded-lg cursor-pointer">
+                <i class="fa-brands fa-playstation text-lg text-white text-center"></i>
+                <span class="text-base text-white text-center">Series X|S</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-7 flex-col align-middle mt-auto basis-96">
+          <div class="flex gap-2 items-center">
+            <h1 class="text-3xl text-yellow-400 font-medium">{{productDetail.rate}}</h1>
+            <i class="fa-solid fa-star text-yellow-400 text-xl"></i>
+          </div>
+          <div class="flex flex-col gap-1">
+            <div class="flex justify-between w-full">
+              <p class="max-w-[400px] textBreak-4 text-base text-gray-300">Ngày ra mắt</p>
+              <p class="max-w-[400px] textBreak-4 text-base text-gray-300">22/4/2023</p>
+            </div>
+            <div class="flex justify-between w-full">
+              <p class="max-w-[400px] textBreak-4 text-base text-gray-300">Nhà phát hành</p>
+              <p class="max-w-[400px] textBreak-4 text-base text-gray-300">{{productDetail.developer}}</p>
+            </div>
+            <div class="flex justify-between w-full">
+              <p class="max-w-[400px] textBreak-4 text-base text-gray-300">Thể loại</p>
+              <p class="max-w-[400px] textBreak-4 text-base text-gray-300">{{ getCategoryNameById(productDetail.categoryId) }}</p>
+            </div>
+            <div class="flex justify-between w-full">
+              <p class="max-w-[400px] textBreak-4 text-base text-gray-300">Ngày cập nhật</p>
+              <p class="max-w-[400px] textBreak-4 text-base text-gray-300">12/5/2024</p>
+            </div>
+          </div>
+          <div class="flex gap-4 w-full">
+            <div class="flex w-full ">
+              <input type="hidden" value="1" min="1" #quantity>
+              <button (click)="addCart(quantity.value)" class="py-3 px-5 flex justify-between rounded-lg bg-[#2993Fa] w-full text-base font-medium text-white">Mua Ngay
+                <div class="flex gap-3 items-center">
+                  <span *ngIf="productDetail.promotionalPrice !== 0" class="text-gray-600 text-sm line-through">
+                    {{ productDetail.promotionalPrice.toLocaleString('vi-VN', {
+                      style: 'currency',
+                      currency: 'VND'
+                    })}}
+                  </span>
+                  <span class="text-white text-base font-medium">{{productDetail.cornerPrice.toLocaleString('vi-VN', {
+                    style: 'currency',
+                    currency: 'VND'
+                  })}}</span>
+                </div>
+              </button>
+            </div>
+            <button class=" px-4 rounded-lg bg-[#1C2C3B] flex items-center justify-center"><i class="fa-regular fa-heart text-lg text-white"></i></button>
+          </div>
+        </div>
+      </div>
+      <div>
+      </div>
+    </div>
+    <div class="grid grid-cols-4 gap-4">
+      <div *ngFor="let item of productDetail.imgDescription" class="cursor-pointer">
+        <img loading="lazy" src="./assets/images/GameImages/{{productDetail.name}}/{{item}}"
+          class="w-full h-full object-cover object-center rounded-xl" alt="">
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,63 @@
+<div class="">
+  <div class="grid grid-cols-3 gap-x-4 mt-4">
+    <a routerLink="/product/{{item.id}}" *ngFor="let item of productTrend.slice(0,3)" class="relative">
+      <div class="h-[200px]">
+        <img loading="lazy" src="./assets/images/GameImages/{{item.name}}/{{item.img}}" class="w-full h-full object-cover rounded-lg"
+          alt="">
+      </div>
+      <div class="absolute bottom-0 flex justify-between w-full bg-slate-800 bg-opacity-5 p-3">
+        <div class="absolute top-0 left-0 w-full h-full bg-[#2a2a2aa0] z-10 blur"></div>
+        <div class="flex flex-col read-only: z-20">
+          <p class="text-base text-gray-400">{{ getCategoryNameById(item.categoryId) }}</p>
+          <h1 class="text-lg text-white font-medium">{{item.name}}</h1>
+        </div>
+        <button class="py-2 z-20 px-4 bg-[#2993Fa] rounded-xl mt-auto text-white" style="height: fit-content;">
+          Mua ngay
+        </button>
+      </div>
+    </a>
+  </div>
+  <div class="flex flex-col gap-5 mt-8">
+    <div class="flex justify-between">
+      <h1 class="text-2xl text-white font-medium">Tất cả Games ({{filteredProducts.length}})</h1>
+      <select class="py-2 px-3 rounded bg-[#1C2C3B] text-white text-base" [(ngModel)]="selectedCategoryId"
+        (change)="filterProductsByCategory()">
+        <option disabled selected hidden>Chọn thể loại</option>
+        <option *ngFor="let item of categories" [value]="item.id">{{item.name}}</option>
+      </select>
+    </div>
+    <div id='loading' *ngIf="setLoading"
+      class='loading w-10 h-10 rounded-full border-blue-500 border-4 border-r-4 border-r-transparent animate-spin mx-auto my-10'>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 place-content-between">
+      <a routerLink="/product/{{item.id}}" *ngFor="let item of filteredProducts"
+        class="flex flex-col gap-3 transform transition duration-300 hover:scale-110 cursor-pointer justify-between">
+        <div class="w-full h-[180px]">
+          <img loading="lazy" src="./assets/images/GameImages/{{item.name}}/{{item.img}}" class="w-full h-full object-cover rounded-lg"
+            alt="">
+        </div>
+        <div class="inline-block py-1 px-2 rounded bg-[#1C2C3B]" style="width: fit-content;">
+          <span class="text-white text-sm">Basic Game</span>
+        </div>
+        <div class="flex flex-col gap-3">
+          <span class="text-base text-white font-medium">{{item.name}}</span>
+          <div class="flex items-center gap-3 mt-auto">
+            <div *ngIf="item.promotionalPrice !== 0" class="py-[2px] px-[8px] rounded-lg bg-[#2993Fa]">
+              <span class="text-white text-sm">-{{ getDiscountPercentage(item.promotionalPrice, item.cornerPrice) |
+                number:'1.0-0' }}%</span>
+            </div>
+            <div class="flex gap-2 items-center mt-auto">
+              <span
+                [ngClass]="{'line-through text-gray-600': item.promotionalPrice !== 0, 'text-white text-lg': item.promotionalPrice === 0}">
+                {{item.cornerPrice.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}}
+              </span>
+              <span *ngIf="item.promotionalPrice !== 0" class="text-lg text-white">
+                {{item.promotionalPrice.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })}}
+              </span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+<div class="transition-all">
+  <div class="flex flex-col gap-8 p-5 bg-[#151F2B] rounded-xl sticky top-0 w-[300px] basis-[300px] max-w-full">
+    <div class="flex flex-col">
+      <div class="w-full flex items-center justify-center">
+        <div class="w-[200px] max-w-full h-32">
+          <img src="/assets/images/logo.png" alt="" class="w-full h-full object-cover">
+        </div>
+      </div>
+      <ul class="flex flex-col gap-2">
+        <li class="transition-all p-4 rounded-xl hover:bg-[#1C2C3B] cursor-pointer" routerLink="/home"
+          [routerLinkActive]="'active-link'">
+          <a class="flex gap-4 items-center text-gray-400 text-lg hover:text-[#fff] font-medium"><i
+              class="fa-solid fa-house"></i>Trang Chủ</a>
+        </li>
+        <li class="transition-all p-4 rounded-xl hover:bg-[#1C2C3B] cursor-pointer" routerLink="/shop"
+          [routerLinkActive]="'active-link'">
+          <a class="flex gap-4 items-center text-gray-400 text-lg hover:text-[#fff] font-medium"><i
+              class="fa-solid fa-cart-shopping"></i>Cửa Hàng</a>
+        </li>
+        <li class="transition-all p-4 rounded-xl hover:bg-[#1C2C3B] cursor-pointer" routerLink="/library"
+          [routerLinkActive]="'active-link'">
+          <a class="flex gap-4 items-center text-gray-400 text-lg hover:text-[#fff] font-medium"><i
+              class="fa-solid fa-gamepad"></i>Thư Viện Của Tôi</a>
+        </li>
+      </ul>
+    </div>
+    <div class="flex flex-col gap-3">
+      <span class="text-white text-base ">GAME NỔI BẬT</span>
+      <div class="flex gap-3 items-center">
+        <div class="w-[40px] h-[50px] max-w-full">
+          <img src="./assets/images/GameImages/minecraft.jpg"
+            class="w-full h-full object-cover flex-shrink-0 rounded-lg" alt="">
+        </div>
+        <h3 class="text-base font-medium text-white">MineCraft</h3>
+      </div>
+      <div class="flex gap-3 items-center">
+        <div class="w-[40px] h-[50px] max-w-full">
+          <img src="./assets/images/GameImages/minecraft.jpg"
+            class="w-full h-full object-cover flex-shrink-0 rounded-lg" alt="">
+        </div>
+        <h3 class="text-base font-medium text-white">MineCraft</h3>
+      </div>
+      <div class="flex gap-3 items-center">
+        <div class="w-[40px] h-[50px] max-w-full">
+          <img src="./assets/images/GameImages/minecraft.jpg"
+            class="w-full h-full object-cover flex-shrink-0 rounded-lg" alt="">
+        </div>
+        <h3 class="text-base font-medium text-white">MineCraft</h3>
+      </div>
+    </div>
+    <div class="mt-auto flex gap-4 p-2 items-center rounded bg-[#1C2C3B]">
+      <div class="w-[50px] h-[50px]">
+        <img src="./assets/images/3.jpg" class="w-full h-full object-cover rounded-full flex-shrink-0" alt="">
+      </div>
+      <div class="flex flex-col gap-1">
+        <span class="text-base text-white font-medium">Alex Gamer</span>
+        <p class="text-sm text-gray-500 font-medium">lvl. 24</p>
+      </div>
+      <button (onclick)="logout()" class="ml-auto font-medium text-1xl rounded p-2">
+        <i class="fa-solid fa-right-from-bracket text-white text-xl"></i>
+      </button>
+    </div>
+  </div>
+</div>
